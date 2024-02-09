@@ -12,16 +12,18 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" />
         <link rel="stylesheet" href="style.css">
         <script src="theme.js"></script>
+        <script src="home.js"></script>
+        <script src="main.js"></script>
 
     </head>
     <body>
         <header class="header" data-header>
             <a href="/" class="logo" style="display:flex">
                 <span><img src="./images/logooo.svg" width="70" height="20" alt="" class="logo-light" ></span>
-                <span class="heading-light">COOKING-MADE-EASY</span>
+                <span class="heading-light"><h5 style="border-bottom: 3px dashed orange;">&nbsp;!COOK-BOOK!&nbsp;</h5></span>
               
                 <span><img src="./images/logooo.svg" width="70" height="20" alt="" class="logo-dark" ></span>
-                <span class="heading-dark">COOKING-MADE-EASY</span>
+                <span class="heading-dark"><h5 style="border-bottom: 3px dashed orange;">&nbsp;!COOK-BOOK!&nbsp;</h5></span>
                 
             </a>
             <nav class="navbar">
@@ -44,5 +46,479 @@
                 </span>
             </button>     
         </header>
+
+        <br><br>
+
+        <nav class="mobile-nav" aria-label="primary">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="./recipes.html" class="nav-link" aria-hidden="true">
+                        <span class="item-icon">
+                            <span class="material-symbols-outlined" aria-hidden="true">lunch_dining</span>
+                        </span>
+                        <span class="label-medium">Recipes</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" aria-hidden="true">
+                        <span class="item-icon">
+                            <span class="material-symbols-outlined" aria-hidden="true">Home</span>
+                        </span>
+                        <span class="label-medium">Home</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+        
+        <main>
+            <article>
+                <section class="hero" aria-label="banner">
+                    <div class="banner-card">
+                       <h1 class="display-large">Your desired dish?</h1>
+                        <div class="search-wrapper" data-search-form>
+                            <span class="material-symbols-outlined leading-icon" aria-hidden="true">
+                                local_dining
+                            </span>
+                            <input type="search" name="search" aria-label="Search recipes" placeholder="Search recipes ..." class="search-field body-medium" data-search-field>
+                            <button class="search-submit" aria-label="Submit" data-search-btn>
+                                    <span class="material-symbols-outlined" aria-hidden="true">search</span>
+                            </button>
+                        </div>
+                        <p class="label-medium">
+                            Search any recipe e.g: burger, pizza, sandwich, toast.
+                        </p>
+                        
+                    </div>
+                </section>
+
+                <section class="section tab">
+                    <div class="container">
+                        <div class="tab-list" data-tab-list role="tablist"
+                        aria-label="Meal type">
+
+                            <button class="tab-btn title-small" role="tab" id="tab-1"
+                            tabindex="0" aria-controls="panel-1" aria-selected="true"
+                            data-tab-btn>
+                                Breakfast
+                            </button>
+                            <button class="tab-btn title-small" role="tab" id="tab-2"
+                            tabindex="-1" aria-controls="panel-2" aria-selected="false"
+                            data-tab-btn>
+                                Lunch
+                            </button>
+                            <button class="tab-btn title-small" role="tab" id="tab-3"
+                            tabindex="-1" aria-controls="panel-3" aria-selected="false"
+                            data-tab-btn>
+                                Dinner
+                            </button>
+                            <button class="tab-btn title-small " role="tab" id="tab-4"
+                            tabindex="-1" aria-controls="panel-4" aria-selected="false"
+                            data-tab-btn>
+                                Snack
+                            </button>
+                            <button class="tab-btn title-small" role="tab" id="tab-5"
+                            tabindex="-1" aria-controls="panel-5" aria-selected="false"
+                            data-tab-btn>
+                                Tea Time
+                            </button>
+                        </div>
+
+                        <div class="tab-panel" role="tabpanel" id="panel-1"
+                        aria-labelledby="tab-1" tabindex="0" data-tab-panel>
+
+                            <div class="grid-list">
+                                <div class="card skeleton-card">
+                                    <div class="skeleton card-banner">
+                                        <div class="card-body">
+                                            <div class="skeleton card-title"></div>
+                                            <div class="skeleton card-text"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <figure class="card-media img-holder">
+                                        <img src="./images/recipe.jpg" width="200"
+                                        height="200" loading="lazy" alt="Recipe name" 
+                                        class="img-cover">
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="title-small">
+                                            <a href="./description.html" class="card-link">Lorem Ipsum</a>
+                                            <div class="meta-wrapper">
+                                                <div class="meta-item">
+                                                    <span class="material-symbols-outlined"
+                                                    aria-hidden="true">Schedule</span>
+                                                    <span class="label-medium">2 minutes</span>
+                                                </div>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="./recipes.html" class="btn btn-secondary label-large has-state" style="max-width: 100%;">Show more</a>
+
+                        </div>
+
+                        <div class="tab-panel" role="tabpanel" id="panel-2"
+                        aria-labelledby="tab-2" tabindex="0" data-tab-panel hidden>
+                            Lunch
+                        </div>
+                        <div class="tab-panel" role="tabpanel" id="panel-3"
+                        aria-labelledby="tab-3" tabindex="0" data-tab-panel hidden>
+                            Dinner
+                        </div>
+                        <div class="tab-panel" role="tabpanel" id="panel-4"
+                        aria-labelledby="tab-4" tabindex="0" data-tab-panel hidden>
+                            Snack
+                        </div>
+                        <div class="tab-panel" role="tabpanel" id="panel-5"
+                        aria-labelledby="tab-5" tabindex="0" data-tab-panel hidden>
+                            Tea Time
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="section slider-section" aria-labelledby="slider-label-1" data-slider-section>
+                    <div class="container">
+                        <h2 class="section-title headline-small" id="slider-label-1">
+                            Latest Asian Recipes
+                        </h2>
+                        <div class="slider">
+                            <ul class="slider-wrapper" data-slider-wrapper>
+                                <li class="slider-item">
+                                    <div class="card">
+                                        <figure class="card-media img-holder">
+                                            <img src="./images/recipe.jpg" width="200"
+                                            height="200" loading="lazy" alt="Recipe name" 
+                                            class="img-cover">
+                                        </figure>
+                                        <div class="card-body">
+                                            <h3 class="title-small">
+                                                <a href="./description.html" class="card-link">Lorem Ipsum</a>
+                                                <div class="meta-wrapper">
+                                                    <div class="meta-item">
+                                                        <span class="material-symbols-outlined"
+                                                        aria-hidden="true">Schedule</span>
+                                                        <span class="label-medium">2 minutes</span>
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider-item">
+                                    <div class="card">
+                                        <figure class="card-media img-holder">
+                                            <img src="./images/recipe.jpg" width="200"
+                                            height="200" loading="lazy" alt="Recipe name" 
+                                            class="img-cover">
+                                        </figure>
+                                        <div class="card-body">
+                                            <h3 class="title-small">
+                                                <a href="./description.html" class="card-link">Lorem Ipsum</a>
+                                                <div class="meta-wrapper">
+                                                    <div class="meta-item">
+                                                        <span class="material-symbols-outlined"
+                                                        aria-hidden="true">Schedule</span>
+                                                        <span class="label-medium">2 minutes</span>
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider-item">
+                                    <div class="card">
+                                        <figure class="card-media img-holder">
+                                            <img src="./images/recipe.jpg" width="200"
+                                            height="200" loading="lazy" alt="Recipe name" 
+                                            class="img-cover">
+                                        </figure>
+                                        <div class="card-body">
+                                            <h3 class="title-small">
+                                                <a href="./description.html" class="card-link">Lorem Ipsum</a>
+                                                <div class="meta-wrapper">
+                                                    <div class="meta-item">
+                                                        <span class="material-symbols-outlined"
+                                                        aria-hidden="true">Schedule</span>
+                                                        <span class="label-medium">2 minutes</span>
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider-item">
+                                    <div class="card">
+                                        <figure class="card-media img-holder">
+                                            <img src="./images/recipe.jpg" width="200"
+                                            height="200" loading="lazy" alt="Recipe name" 
+                                            class="img-cover">
+                                        </figure>
+                                        <div class="card-body">
+                                            <h3 class="title-small">
+                                                <a href="./description.html" class="card-link">Lorem Ipsum</a>
+                                                <div class="meta-wrapper">
+                                                    <div class="meta-item">
+                                                        <span class="material-symbols-outlined"
+                                                        aria-hidden="true">Schedule</span>
+                                                        <span class="label-medium">2 minutes</span>
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider-item" data-slider-item>
+                                    <a href="./recipes.html" class="load-more-card has-state">
+                                        <span class="label-large">Show more</span>
+                                        <span class="material-symbols-outlined" aria-hidden="true">
+                                            navigate_next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section slider-section" aria-labelledby="slider-label-1" data-slider-section>
+                    <div class="container">
+                        <h2 class="section-title headline-small" id="slider-label-1">
+                            Latest French Recipes
+                        </h2>
+                        <div class="slider">
+                            <ul class="slider-wrapper" data-slider-wrapper>
+                                <li class="slider-item">
+                                    <div class="card">
+                                        <figure class="card-media img-holder">
+                                            <img src="./images/recipe.jpg" width="200"
+                                            height="200" loading="lazy" alt="Recipe name" 
+                                            class="img-cover">
+                                        </figure>
+                                        <div class="card-body">
+                                            <h3 class="title-small">
+                                                <a href="./description.html" class="card-link">Lorem Ipsum</a>
+                                                <div class="meta-wrapper">
+                                                    <div class="meta-item">
+                                                        <span class="material-symbols-outlined"
+                                                        aria-hidden="true">Schedule</span>
+                                                        <span class="label-medium">2 minutes</span>
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider-item">
+                                    <div class="card">
+                                        <figure class="card-media img-holder">
+                                            <img src="./images/recipe.jpg" width="200"
+                                            height="200" loading="lazy" alt="Recipe name" 
+                                            class="img-cover">
+                                        </figure>
+                                        <div class="card-body">
+                                            <h3 class="title-small">
+                                                <a href="./description.html" class="card-link">Lorem Ipsum</a>
+                                                <div class="meta-wrapper">
+                                                    <div class="meta-item">
+                                                        <span class="material-symbols-outlined"
+                                                        aria-hidden="true">Schedule</span>
+                                                        <span class="label-medium">2 minutes</span>
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider-item">
+                                    <div class="card">
+                                        <figure class="card-media img-holder">
+                                            <img src="./images/recipe.jpg" width="200"
+                                            height="200" loading="lazy" alt="Recipe name" 
+                                            class="img-cover">
+                                        </figure>
+                                        <div class="card-body">
+                                            <h3 class="title-small">
+                                                <a href="./description.html" class="card-link">Lorem Ipsum</a>
+                                                <div class="meta-wrapper">
+                                                    <div class="meta-item">
+                                                        <span class="material-symbols-outlined"
+                                                        aria-hidden="true">Schedule</span>
+                                                        <span class="label-medium">2 minutes</span>
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider-item">
+                                    <div class="card">
+                                        <figure class="card-media img-holder">
+                                            <img src="./images/recipe.jpg" width="200"
+                                            height="200" loading="lazy" alt="Recipe name" 
+                                            class="img-cover">
+                                        </figure>
+                                        <div class="card-body">
+                                            <h3 class="title-small">
+                                                <a href="./description.html" class="card-link">Lorem Ipsum</a>
+                                                <div class="meta-wrapper">
+                                                    <div class="meta-item">
+                                                        <span class="material-symbols-outlined"
+                                                        aria-hidden="true">Schedule</span>
+                                                        <span class="label-medium">2 minutes</span>
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider-item" data-slider-item>
+                                    <a href="./recipes.html" class="load-more-card has-state">
+                                        <span class="label-large">Show more</span>
+                                        <span class="material-symbols-outlined" aria-hidden="true">
+                                            navigate_next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section tag" aria-labelledby="tag-label">
+                    <div class="container">
+                        <h2 class="section-title display-small" id="tag-label">
+                            Choose your health preferences
+                        </h2>
+                        <p class="body-medium section-text">
+                            Choosing your health preference is an importance step towards 
+                            achieving a healthy lifestyle.
+                        </p>
+                        <div class="tag-list">
+                            <a href="./recipes.html?health=wheat-free" class="badge-btn body-medium has-state">
+                                Wheat-Free
+                            </a>
+                            <a href="./recipes.html?health=vegetarian" class="badge-btn body-medium has-state">
+                                Vegetarian
+                            </a>
+                            <a href="./recipes.html?health=vegan" class="badge-btn body-medium has-state">
+                                Vegan
+                            </a>
+                            <a href="./recipes.html?health=tree-nut-free" class="badge-btn body-medium has-state">
+                                Tree-Nut-Free
+                            </a>
+                            <a href="./recipes.html?health=sulfite-free" class="badge-btn body-medium has-state">
+                                Sulfite-Free
+                            </a>
+                            <a href="./recipes.html?health=sugar-conscious" class="badge-btn body-medium has-state">
+                                Sugar-Conscious
+                            </a>
+                            <a href="./recipes.html?health=soy-free" class="badge-btn body-medium has-state">
+                                Soy-Free
+                            </a>
+                            <a href="./recipes.html?health=shellfish-free" class="badge-btn body-medium has-state">
+                                Shellfish-Free
+                            </a>
+                            <a href="./recipes.html?health=sesame-free" class="badge-btn body-medium has-state">
+                                Sesame-Free
+                            </a>
+                            <a href="./recipes.html?health=red-meat-free" class="badge-btn body-medium has-state">
+                                Red-Meat-Free
+                            </a>
+                            <a href="./recipes.html?health=pork-free" class="badge-btn body-medium has-state">
+                                Pork-Free
+                            </a>
+                            <a href="./recipes.html?health=pecatarian" class="badge-btn body-medium has-state">
+                                Pescatarian
+                            </a>
+                            <a href="./recipes.html?health=peanut-free" class="badge-btn body-medium has-state">
+                                Peanut-Free
+                            </a>
+                            <a href="./recipes.html?health=paleo" class="badge-btn body-medium has-state">
+                                Paleo
+                            </a>
+                            <a href="./recipes.html?health=no-oil-added" class="badge-btn body-medium has-state">
+                                No Oil Added
+                            </a>
+                            <a href="./recipes.html?health=mustard-free" class="badge-btn body-medium has-state">
+                                Mustard-Free
+                            </a>
+                            <a href="./recipes.html?health=mollusk-free" class="badge-btn body-medium has-state">
+                                Mollusk-Free
+                            </a>
+                            <a href="./recipes.html?health=mediterranean" class="badge-btn body-medium has-state">
+                                Mediterranean
+                            </a>
+                            <a href="./recipes.html?health=lupine-free" class="badge-btn body-medium has-state">
+                                Lupine-Free
+                            </a>
+                            <a href="./recipes.html?health=low-sugar" class="badge-btn body-medium has-state">
+                                Low Sugar
+                            </a>
+                            <a href="./recipes.html?health=low-potassium" class="badge-btn body-medium has-state">
+                                Low Potassium
+                            </a>
+                            <a href="./recipes.html?health=kosher" class="badge-btn body-medium has-state">
+                                Kosher
+                            </a>
+                            <a href="./recipes.html?health=kidney-friendly" class="badge-btn body-medium has-state">
+                                Kidney-Friendly
+                            </a>
+                            <a href="./recipes.html?health=keto-friendly" class="badge-btn body-medium has-state">
+                                Kidney-Friendly
+                            </a>
+                            <a href="./recipes.html?health=immuno-supportive" class="badge-btn body-medium has-state">
+                                Immuno-Supportive
+                            </a>
+                            <a href="./recipes.html?health=gluten-free" class="badge-btn body-medium has-state">
+                                Gluten-Free
+                            </a>
+                            <a href="./recipes.html?health=fodmap-free" class="badge-btn body-medium has-state">
+                                FODMAP-Free
+                            </a>
+                            <a href="./recipes.html?health=fish-free" class="badge-btn body-medium has-state">
+                                Fish-Free
+                            </a>
+                            <a href="./recipes.html?health=DASH" class="badge-btn body-medium has-state">
+                                DASH
+                            </a>
+                            <a href="./recipes.html?health=dairy-free" class="badge-btn body-medium has-state">
+                                Dairy-Free
+                            </a>
+                            <a href="./recipes.html?health=crustacean-free" class="badge-btn body-medium has-state">
+                                Crustacean-Free
+                            </a>
+                            <a href="./recipes.html?health=celery-free" class="badge-btn body-medium has-state">
+                                Celery-Free
+                            </a>
+                            <a href="./recipes.html?health=alcohol-free" class="badge-btn body-medium has-state">
+                                Alcohol-Free
+                            </a>
+                            <a href="./recipes.html?health=alcohol-cocktail" class="badge-btn body-medium has-state">
+                                Alcohol-Cocktail
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <p class="copyright body-medium">Copyright 2024 Rabia Zubair &#169;</p>
+           <!-- <a href="/" class="logo" style="display:flex">
+                <span><img src="./images/logooo.svg" width="70" height="20" alt="" class="logo-light" ></span>
+                <span class="heading-light"><h5 style="border-bottom: 3px dashed orange;">&nbsp;!COOK-BOOK!&nbsp;</h5></span>
+              
+                <span><img src="./images/logooo.svg" width="70" height="10" alt="" class="logo-dark" ></span>
+                <span class="heading-dark"><h5 style="border-bottom: 3px dashed orange;">&nbsp;!COOK-BOOK!&nbsp;</h5></span>
+                
+            </a>-->
+            <a href="https://www.edamam.com/" target="_blank" class="edamam">
+                <img src="./images/edamam.svg" width="200" height="40" 
+                loading="lazy" alt="edamam recipe api">
+            </a>
+        </footer>
     </body>
 </html>
