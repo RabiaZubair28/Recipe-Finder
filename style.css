@@ -338,7 +338,7 @@ main{
     margin-top: 30px; 
     margin-bottom: 5px;
     color:black;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 0.75cm;
@@ -347,7 +347,7 @@ main{
     padding-left: 10px; 
     padding-top: 30px; 
     color:white;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 0.75cm;
@@ -372,7 +372,7 @@ main{
 
 .mobile-nav .nav-list{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     text-align: center;
 }
 .mobile-nav .nav-link[aria-current="true"]
@@ -407,11 +407,56 @@ main{
 .banner-card{
     background-color: var(--image-background);
     color: var(--white);
-    background-image: url("./images/hero-banner-small.jpg");
+    background-image: url("./images/img3.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 480px;
+    height: 510px;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    text-align: center;
+    padding-inline: 20px;
+    border-radius: var(--radius-8);
+}
+.banner-card2{
+    background-color: var(--image-background);
+    color: var(--white);
+    background-image: url("./images/r2.avif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 510px;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    text-align: center;
+    padding-inline: 20px;
+    border-radius: var(--radius-8);
+}
+.banner-card3{
+    background-color: var(--image-background);
+    color: var(--white);
+    background-image: url("./images/i.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 510px;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    text-align: center;
+    padding-inline: 20px;
+    border-radius: var(--radius-8);
+}
+.banner-card4{
+    background-color: var(--image-background);
+    color: var(--white);
+    background-image: url("./images/n.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 510px;
     display: grid;
     grid-template-columns: 1fr;
     place-content: center;
@@ -695,4 +740,32 @@ card:not(:has(.skeleton)){
 }
 .footer .edamam img{
     width: 180px
+}
+.cardy{
+    width: 340px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+
+}
+.btny{
+    width: 300px;
+    height: 40px;
+    margin-top:10px;
+    font-size: 18px;
+    border: 2px dashed white;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(255, 132, 0);
+}
+.imgy{
+    border-radius: 8px;
+}
+.tags{
+    cursor: pointer; text-align: center; font-size: 35px;font-weight: 700;
+}
+.tags:hover{
+    font-size: 30px;
 }
