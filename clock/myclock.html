@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock in HTML - CSS - JS</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+
+   <h1 style="text-align:center; font-family: sans-serif; font-size: 40px; font-weight: bolder;" class="typewriter">
+        <strong style="color:rgb(105, 169, 243)">M</strong>
+        <strong style="color:rgb(240, 143, 185)">y</strong>
+        <strong style="color:rgb(137, 105, 243)">&nbsp;</strong>
+        <strong style="color:rgb(137, 105, 243)">C</strong>
+        <strong style="color:rgb(240, 143, 185)">l</strong>
+        <strong style="color:rgb(105, 169, 243)">o</strong>
+        <strong style="color:rgb(240, 143, 185)">c</strong>
+        <strong style="color:rgb(137, 105, 243)">k</strong>
+        
+    </h1>
+    <br><br><br><br><br><br>
+
+    
+
+    <div class="clock">
+        
+        <div class="needle hr poppy1" ><span></span></div>
+        <div class="needle mn poppy2"><span></span></div>
+        <div class="needle ss poppy3" style="--h:100px; --clr:white"><span>
+
+        </span></div>
+
+        <ul >
+            <li style="--i:1"><span style="padding:10px;">1</span></li>
+            <li style="--i:2"><span style="padding:10px;">2</span></li>
+            <li style="--i:3"><span style="padding:10px;">3</span></li>
+            <li style="--i:4"><span style="padding:10px;">4</span></li>
+            <li style="--i:5"><span style="padding:10px;">5</span></li>
+            <li style="--i:6"><span style="padding:10px;">6</span></li>
+            <li style="--i:7"><span style="padding:10px;">7</span></li>
+            <li style="--i:8"><span style="padding:10px;">8</span></li>
+            <li style="--i:9"><span style="padding:10px;">9</span></li>
+            <li style="--i:10"><span style="padding:10px;">10</span></li>
+            <li style="--i:11"><span style="padding:10px;">11</span></li>
+            <li style="--i:12"><span style="padding:10px;">12</span></li>
+        </ul>
+        
+    </div>
+    <br><br> <br><br> <br><br> <br><br>
+    <div class="container">
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+        <span id="session">AM</span>
+    </div>
+
+<!-- Custom JS -->
+<script src="scripting.js"></script>
+</body>
+</html>
