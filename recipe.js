@@ -8,6 +8,9 @@ const loading = document.querySelector("#loading");
 
 loading.style.display = "block";
 
+// idea for fetching API 
+// taken from https://medium.com/@tamilnambicse/edamam-recipe-search-api-and-javascript-part-1-3ef8ab582daa
+
 const url = new URL(endpoint);
 url.searchParams.append("r", uri);
 url.searchParams.append("app_id", app_id);
