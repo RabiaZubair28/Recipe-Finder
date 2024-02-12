@@ -1,4 +1,5 @@
-// javascript for dark light mode
+// javascript for dark light mode from youtube video
+
 const $HTML = document.documentElement;
 const isDark = window.matchMedia("(prefers-color-scheme:dark)").matches;
 
@@ -23,13 +24,16 @@ window.addEventListener("load",function(){
     $themeBtn.addEventListener("click",changeTheme)
 })
 
+// idea for fetching API 
+// taken from https://medium.com/@tamilnambicse/edamam-recipe-search-api-and-javascript-part-1-3ef8ab582daa
 
 sessionStorage.setItem("app_id", "1f05a08d");
 sessionStorage.setItem("app_key", "a614fb15c7618687c8cd2382d7a980a9");
 sessionStorage.setItem("endpoint", "https://api.edamam.com/search");
 
-function getRecipeByRecipe() {
-  const recipe = document.getElementById("recipe").value;
+function getRecipeByRecipe() 
+{
+  const recipe = document.querySelector("#recipe").value;
   const app_id = sessionStorage.getItem("app_id");
   const app_key = sessionStorage.getItem("app_key");
   const endpoint = sessionStorage.getItem("endpoint");
@@ -41,32 +45,28 @@ function getRecipeByRecipe() {
   let mealType = "";
   let calories = "";
 
-  // Get the loading element
-  const loadingElement = document.getElementById("loading");
+  const loadingElement = document.querySelector("#loading");
 
-  // Show the loading element
   loadingElement.style.display = "block";
 
-  // Create the URL with query parameters
   const url = new URL(endpoint);
   url.searchParams.append("q", recipe);
   url.searchParams.append("app_id", app_id);
   url.searchParams.append("app_key", app_key);
 
-  // Make the API request using the fetch function
-  fetch(url)
-    .then((response) => {
-      // Check if the request was successful
-      if (response.status === 200) {
-        // Hide the loading element
+  fetch(url).then((response) => 
+  {
+      if (response.status === 200) 
+      {
         loadingElement.style.display = "none";
-        return response.json(); // Parse the JSON response
-      } else {
+        return response.json(); 
+      } 
+      else 
+      {
         throw new Error(`Request failed with status code ${response.status}`);
       }
-    })
-    .then((data) => {
-      // Process the recipe data (it may contain multiple recipes)
+    }).then((data) => 
+    {
       data.hits.forEach((recipe) => {
         label = recipe.recipe.label;
         image = recipe.recipe.image;
@@ -91,8 +91,9 @@ function getRecipeByRecipe() {
       console.error("Error:", error);
     });
 }
+
 function getRecipeByIngredient() {
-  const ingredient = document.getElementById("ingredient").value;
+  const ingredient = document.querySelector("#ingredient").value;
   const app_id = sessionStorage.getItem("app_id");
   const app_key = sessionStorage.getItem("app_key");
   const endpoint = sessionStorage.getItem("endpoint");
@@ -104,32 +105,23 @@ function getRecipeByIngredient() {
   let mealType = "";
   let calories = "";
 
-  // Get the loading element
-  const loadingElement = document.getElementById("loading");
+  const loadingElement = document.querySelector("#loading");
 
-  // Show the loading element
   loadingElement.style.display = "block";
 
-  // Create the URL with query parameters
   const url = new URL(endpoint);
   url.searchParams.append("q", ingredient);
   url.searchParams.append("app_id", app_id);
   url.searchParams.append("app_key", app_key);
 
-  // Make the API request using the fetch function
-  fetch(url)
-    .then((response) => {
-      // Check if the request was successful
+  fetch(url).then((response) => {
       if (response.status === 200) {
-        // Hide the loading element
         loadingElement.style.display = "none";
-        return response.json(); // Parse the JSON response
+        return response.json(); 
       } else {
         throw new Error(`Request failed with status code ${response.status}`);
       }
-    })
-    .then((data) => {
-      // Process the recipe data (it may contain multiple recipes)
+    }).then((data) => {
       data.hits.forEach((recipe) => {
         label = recipe.recipe.label;
         image = recipe.recipe.image;
@@ -155,7 +147,7 @@ function getRecipeByIngredient() {
     });
 }
 function getRecipeByCuisine() {
-  const c = document.getElementById("cuisine").value;
+  const c = document.querySelector("#cuisine").value;
   const app_id = sessionStorage.getItem("app_id");
   const app_key = sessionStorage.getItem("app_key");
   const endpoint = sessionStorage.getItem("endpoint");
@@ -167,33 +159,24 @@ function getRecipeByCuisine() {
   let mealType = "";
   let calories = "";
 
-  // Get the loading element
-  const loadingElement = document.getElementById("loading");
-
-  // Show the loading element
+  const loadingElement = document.querySelector("#loading");
   loadingElement.style.display = "block";
-
-  // Create the URL with query parameters
   const url = new URL(endpoint);
+
   url.searchParams.append("q", "all");
   url.searchParams.append("cuisineType", c);
   url.searchParams.append("app_id", app_id);
   url.searchParams.append("app_key", app_key);
 
-  // Make the API request using the fetch function
-  fetch(url)
-    .then((response) => {
-      // Check if the request was successful
+  fetch(url).then((response) => {
+      
       if (response.status === 200) {
-        // Hide the loading element
         loadingElement.style.display = "none";
-        return response.json(); // Parse the JSON response
+        return response.json(); 
       } else {
         throw new Error(`Request failed with status code ${response.status}`);
       }
-    })
-    .then((data) => {
-      // Process the recipe data (it may contain multiple recipes)
+    }).then((data) => {
       data.hits.forEach((recipe) => {
         label = recipe.recipe.label;
         image = recipe.recipe.image;
@@ -231,34 +214,27 @@ function getRecipeByNutrition(input) {
   let mealType = "";
   let calories = "";
 
-  // Get the loading element
-  const loadingElement = document.getElementById("loading");
+  const loadingElement = document.querySelector("#loading");
 
-  // Show the loading element
   loadingElement.style.display = "block";
 
-  // Create the URL with query parameters
   const url = new URL(endpoint);
   url.searchParams.append("q", "all");
   url.searchParams.append("health", input);
   url.searchParams.append("app_id", app_id);
   url.searchParams.append("app_key", app_key);
 
-  // Make the API request using the fetch function
-  fetch(url)
-    .then((response) => {
-      // Check if the request was successful
+ 
+  fetch(url).then((response) => {
       if (response.status === 200) {
-        // Hide the loading element
         loadingElement.style.display = "none";
-        return response.json(); // Parse the JSON response
+        return response.json(); 
       } else {
         throw new Error(`Request failed with status code ${response.status}`);
       }
-    })
-    .then((data) => {
-      // Process the recipe data (it may contain multiple recipes)
-      data.hits.forEach((recipe) => {
+    }).then((data) => {
+      
+        data.hits.forEach((recipe) => {
         label = recipe.recipe.label;
         image = recipe.recipe.image;
         uri = recipe.recipe.uri;
@@ -283,7 +259,6 @@ function getRecipeByNutrition(input) {
     });
 }
 function getAsian() {
-  
   const app_id = sessionStorage.getItem("app_id");
   const app_key = sessionStorage.getItem("app_key");
   const endpoint = sessionStorage.getItem("endpoint");
@@ -295,34 +270,28 @@ function getAsian() {
   let mealType = "";
   let calories = "";
 
-  // Get the loading element
-  const loadingElement = document.getElementById("loading");
-
-  // Show the loading element
+  const loadingElement = document.querySelector("#loading");
   loadingElement.style.display = "block";
 
-  // Create the URL with query parameters
   const url = new URL(endpoint);
   url.searchParams.append("q", "all");
   url.searchParams.append("cuisineType", "asian");
   url.searchParams.append("app_id", app_id);
   url.searchParams.append("app_key", app_key);
 
-  // Make the API request using the fetch function
-  fetch(url)
-    .then((response) => {
-      // Check if the request was successful
-      if (response.status === 200) {
-        // Hide the loading element
+  fetch(url).then((response) => 
+  {
+      if (response.status === 200) 
+      {
         loadingElement.style.display = "none";
-        return response.json(); // Parse the JSON response
-      } else {
+        return response.json(); 
+      } else 
+      {
         throw new Error(`Request failed with status code ${response.status}`);
       }
-    })
-    .then((data) => {
-      // Process the recipe data (it may contain multiple recipes)
-      data.hits.forEach((recipe) => {
+    }).then((data) => 
+    {  
+        data.hits.forEach((recipe) => {
         label = recipe.recipe.label;
         image = recipe.recipe.image;
         uri = recipe.recipe.uri;
@@ -359,34 +328,29 @@ function getFrench() {
   let mealType = "";
   let calories = "";
 
-  // Get the loading element
-  const loadingElement = document.getElementById("loading");
-
-  // Show the loading element
+  const loadingElement = document.querySelector("#loading");
   loadingElement.style.display = "block";
 
-  // Create the URL with query parameters
   const url = new URL(endpoint);
   url.searchParams.append("q", "all");
   url.searchParams.append("cuisineType", "french");
   url.searchParams.append("app_id", app_id);
   url.searchParams.append("app_key", app_key);
 
-  // Make the API request using the fetch function
-  fetch(url)
-    .then((response) => {
-      // Check if the request was successful
-      if (response.status === 200) {
-        // Hide the loading element
+
+  fetch(url).then((response) => 
+  {
+      if (response.status === 200) 
+      {
         loadingElement.style.display = "none";
-        return response.json(); // Parse the JSON response
-      } else {
+        return response.json(); 
+      } else 
+      {
         throw new Error(`Request failed with status code ${response.status}`);
       }
-    })
-    .then((data) => {
-      // Process the recipe data (it may contain multiple recipes)
-      data.hits.forEach((recipe) => {
+    }).then((data) => 
+    {
+        data.hits.forEach((recipe) => {
         label = recipe.recipe.label;
         image = recipe.recipe.image;
         uri = recipe.recipe.uri;
@@ -422,35 +386,30 @@ function getChinese() {
   let uri = "";
   let mealType = "";
   let calories = "";
-
-  // Get the loading element
-  const loadingElement = document.getElementById("loading");
-
-  // Show the loading element
+ 
+  const loadingElement = document.querySelector("#loading");
   loadingElement.style.display = "block";
 
-  // Create the URL with query parameters
   const url = new URL(endpoint);
   url.searchParams.append("q", "all");
   url.searchParams.append("cuisineType", "chinese");
   url.searchParams.append("app_id", app_id);
   url.searchParams.append("app_key", app_key);
 
-  // Make the API request using the fetch function
-  fetch(url)
-    .then((response) => {
-      // Check if the request was successful
-      if (response.status === 200) {
-        // Hide the loading element
+
+  fetch(url).then((response) => 
+  {
+      if (response.status === 200) 
+      {
         loadingElement.style.display = "none";
-        return response.json(); // Parse the JSON response
-      } else {
+        return response.json(); 
+      } else 
+      {
         throw new Error(`Request failed with status code ${response.status}`);
       }
-    })
-    .then((data) => {
-      // Process the recipe data (it may contain multiple recipes)
-      data.hits.forEach((recipe) => {
+    }).then((data) => 
+    {
+        data.hits.forEach((recipe) => {
         label = recipe.recipe.label;
         image = recipe.recipe.image;
         uri = recipe.recipe.uri;
