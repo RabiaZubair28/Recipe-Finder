@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@formspree/react": "^2.5.1",
+    "gsap": "^3.12.5",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
+    "mongoose": "^8.9.2",
+    "qrcode.react": "^4.2.0",
+    "react-helmet": "^6.1.0",
+    "react-share": "^5.1.1",
+    "react-toastify": "^11.0.2",
+    "swiper": "^11.1.15",
+    "vcards-js": "^2.10.0"
+  }
+}
